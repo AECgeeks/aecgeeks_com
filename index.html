@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700' rel='stylesheet' type='text/css'>
+    <link href='jquery.fullPage.css' rel='stylesheet' type='text/css'>
+    <script src='jquery.min.js'></script>
+    <script src='jquery.fullPage.min.js'></script>
+    <title>AECgeeks | Software development and consultancy for the Architecture Engineering and Construction industry</title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+      body, h1 {
+        font-family: lora, georgia, serif;
+        font-weight: 400;
+        text-align: center;
+        font-size: 15px;
+        color: #999;
+      }
+      h1 {
+        padding: 0;
+        margin: 0;
+        font-size: 36px;
+        color: #666;
+        letter-spacing: -1px;
+      }
+      h1 .a, h1 .e, h1 .c {
+        font-weight: 700;
+        font-size: 48px;
+      }
+      .a { color: #a6672b; }
+      .e { color: #d9a92b; }
+      .c { color: #5ab1ad; }
+      .d, .t {
+        width: 400px;
+        border-top: solid 1px #ddd;
+        border-bottom: solid 1px #ddd;
+        margin: 10px auto 0 auto;
+        padding: 10px 0 10px 0;
+      }
+      .f {
+        padding: 10px 0 0 0;
+      }
+      .f, .f a {
+        font-size: 12px;
+        color: #aaa;
+      }
+      .t {
+        width: 600px;
+        margin-top: 100px;
+        padding-bottom: 10px;
+        text-align: left;
+        margin-bottom: 100px;
+      }
+      .t img {
+        display: block;
+        float: left;
+        width: 128px;
+        height: 128px;
+        padding: 0 20px 0 0;
+      }
+      .t .drk {
+        padding: 30px 0 10px 0;
+      }
+      .drk {
+        color: #555;
+      }
+      #menu {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        border-bottom: solid 1px #ddd;
+        z-index: 70;
+        margin: 0;
+        display: none;
+        text-align: left;
+        width: 100%;
+      }
+      #menu ul {
+        margin: 10px 20%;
+        padding: 0;
+      }
+      #menu li {
+        display: inline-block;
+        padding: 2px 10px;
+      }
+      #menu a {
+        color: #black;
+        opacity: 0.3;
+      }
+      #menu .active a {
+        opacity: 1.0;
+      }
+      a {
+        text-decoration: none;
+        color: #444;
+      }
+      .d a {
+        margin: 80px 10px 0 10px;
+        display: inline-block;
+        border-bottom: dotted 1px #444;
+      }
+    </style>
+    <script>
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
+            anchors:['main', 'about'],
+            navigation: true,
+            autoScrolling: false,
+            fitToSection: false,
+            menu: "#menu",
+            afterLoad: function(anchorLink, index) {
+                $("#menu")[index > 1 ? "fadeIn" : "fadeOut"]();
+            },
+        });
+    });
+    </script>
+  </head>
+  <body>
+    <div id="menu">
+        <ul>
+            <li data-menuanchor="main"><a href="#main"><span class="a">A</span><span class="e">E</span><span class="c">C</span>geeks</a></li>
+            <li data-menuanchor="about"><a href="#about">about</a></li>
+        </ul>
+    </div>
+    <div id="fullpage">
+    <div class='section'>
+    
+    <h1><span class="a">A</span><span class="e">E</span><span class="c">C</span>geeks</h1>
+    <div class="d">
+        Software development and consultancy for the <class class="a">Architecture</class> <class class="e">Engineering</class> and <class class="c">Construction</class> industry.
+        
+        <a href='#about'>about</a>
+    </div>
+    <div class="f">
+        Dutch Chamber of Commerce number: 59997338 (KvK nummer)<br />
+        VAT number: NL001164836B18 (BTW nummer)<br />
+        <br />
+        <a href="mailto:info@AECgeeks.com">info@AECgeeks.com</a>
+    </div>
+    </div>
+    <div class='section'>
+    <div class='t' style='width:870px'>
+        <span class="a">A</span><span class="e">E</span><span class="c">C</span>geeks delivers high quality software products and research for the built environment sector. By leveraging extensive and widely used open-source offerings we can provide bespoke solutions to complex problems in a minimal amount of time.
+        <br><br>
+        We have experience with governmental clients working on state of the art automated code compliance checking based on IFC and voxelization. We have worked with renowned research institutes such as University of Toronto, the Technical University of Denmark and the Dutch applied research organization TNO. We have provided training and consultancy for various Small and Medium-sized Enterprises and Start-ups on topics such as data modelling, Building Information Modelling (BIM), geometrical analysis, visualisation and parametric design. We provide regular consultancy services for buildingSMART International and local chapters. We have also contributed to a variety of EU-funded projects.
+        <br><br>
+        If you want to learn more about what we can do for you feel free to reach out to <a href='mailto:info@aecgeeks.com'>info@aecgeeks.com</a>.
+        <br style='clear:both' /><br />
+        <img src='thomas_round_256.png' />
+        <div class='drk'>Thomas Krijnen</div>
+        Founder and principal engineer
+        <br style='clear:both' />
+        <br style='clear:both' />
+        <img src='johan_round_256.png' />
+        <div class='drk'>Johan Luttun</div>
+        Scientific software engineer
+        <br style='clear:both' />
+        <br style='clear:both' />
+        <br style='clear:both' />
+        <img src='unknown_round_256.png' />
+        <div class='drk'>Tong Wang</div>
+        Business development and research strategist
+    </div>
+    </div>
+    </div>
+  </body>
+</html>
